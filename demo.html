@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    body {
+        position: relative;
+    }
+
+    img {
+        position: absolute;
+    }
+</style>
+<body>
+<img style="top: 300px; left: 200px" id="pokemon"
+     src="https://i.pinimg.com/originals/42/9b/17/429b171accad8b42f906e43b35c3b341.jpg" width="100px">
+<SCRIPT>
+    // //trinh duyet lang nghe 1 su kien
+    // window.addEventListener('keydown',demoEvent);
+    // function demoEvent(eventKey){  // eventKey là biến hứng sự kiện từ keydown
+    //     console.log(eventKey);
+    //     document.write(eventKey.key)
+    // }
+
+    function randomPosition() {
+        //math.random()
+        let top = parseInt(Math.random() * 500);
+        let left = parseInt(Math.random() * 500);     //math.floor. math.round, math.ceil
+        document.getElementById('pokemon').style.top = top + "px";
+        document.getElementById('pokemon').style.left = left + "px";
+    }
+
+    randomPosition();
+    //setInterval(randomPosition,100)
+    // //trinh duyet lang nghe 1 su kien
+    window.addEventListener('keydown', demoEvent);
+
+    function demoEvent(eventKey) {  // eventKey là biến hứng sự kiện từ keydown
+        console.log(eventKey);
+        let left = parseInt(document.getElementById('pokemon').style.left)
+        if (eventKey.key == 'd') {
+            left += 10;
+            document.getElementById('pokemon').style.left = left + 'px'
+        } else if (eventKey.key == 'a')
+            left -= 10;
+        document.getElementById('pokemon').style.left = left + 'px'
+    }
+    let top = parseInt(document.getElementById('pokemon').style.top)
+    if (eventKey.key == 'w') {
+        top += 10;
+        document.getElementById('pokemon').style.top = top + 'px'
+    } else if (eventKey.key == 's'){
+        left -= 10;
+    document.getElementById('pokemon').style.top = top + 'px'
+    }
+
+
+</SCRIPT>
+
+</body>
+</html>

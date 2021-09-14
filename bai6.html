@@ -1,10 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    //  5% neu doanh so <=100
+    // 10% neu doanh so <=300
+    // 20% neu doanh so >300
+    let a = +prompt('nhap doanh thu')
+    if(a>300){
+        alert('hoa hong la '+ a*0.2)
+    }else if(a<=300&&a>100){
+        alert('hoa hong la '+ a*0.1)
+    }else if (a<=100){
+        alert('hoa hong la '+ a*0.05)
+    }
+
+</script>
+
+
 </body>
 </html>

@@ -1,10 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    // // PT: ax**2+ bx+ c = 0
+    let a = +prompt('nhap he so bac 2 ')
+    let b = +prompt('nhap he so bac 1 ')
+    let c = +prompt('nhap he so bac 0 ')
+    let delta = (b ** 2 - 4 * a * c) / 2
+    if (delta > 0) {
+        let x1 = parseFloat(-b + Math.sqrt(delta) / (2 * a)).toFixed(3)
+        let x2 = parseFloat(-b - Math.sqrt(delta) / (2 * a)).toFixed(3)
+        alert('Phuong trinh co 2 nghiem la x1= ' + x1 + ' x2 = ' + x2)
+    } else if (delta == 0) {
+        alert('phuong trinh nghiem kep x= ' + (-b / 2 * a))
+    }else {
+        alert('phuong trinh vo nghiem')
+    }
+
+
+</script>
 </body>
 </html>

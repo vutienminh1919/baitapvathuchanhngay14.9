@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // hộ gia đình 100 số đầu phải trả 1000d/số
+    // 101-250 trả 2000d/số
+    // 251-300 trả 2500đ/số
+    // trên 300 trả 3000đ/số
+
+    let a = +prompt(' nhập số điện trong 1 tháng của bạn')
+    if (a <= 100) {
+        alert('Số tiền điện bạn phải trả là ' + a * 1000 + 'VNĐ')
+    } else if (a <= 250) {
+        alert('Số tiền điện bạn phải trả là ' + a * 2000 + 'VNĐ')
+    } else if (a <= 300) {
+        alert('Số tiền điện bạn phải trả là ' + a * 2500 + 'VNĐ')
+    } else if (a > 300) {
+        alert('Số tiền điện bạn phải trả là ' + a * 3000 + 'VNĐ')
+    }
+</script>
+
+
+</body>
+</html>
