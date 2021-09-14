@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body onload="docReady()">
+<img id="cat" src="https://i.pinimg.com/originals/f5/2d/9e/f52d9e5db510110be8831566fac88cb2.gif" style="position:absolute;left:0; top:0;" height="100" width="80"/>
+<script>
+    function moveDown(){
+        let element = document.getElementById("cat");
+        element.style.top = parseInt(element.style.top) - 5 +'px';
+    }function moveUp(){
+        let element = document.getElementById("cat");
+        element.style.top = parseInt(element.style.top) + 5 +'px';
+    }function moveLeft(){
+        let element = document.getElementById("cat");
+        element.style.left = parseInt(element.style.left) - 5 +'px';
+    }function moveRight(){
+        let element = document.getElementById("cat");
+        element.style.left = parseInt(element.style.left) + 5 +'px';
+    }
+    function moveSelection(evt){
+        switch (evt,keyCode){
+            case 37:
+                moveLeft();
+                break
+            case 39:
+                moveRight();
+                break
+            case 38:
+                moveUp();
+                break
+            case 40:
+                moveDown();
+                break
+        }
+    }
+    function docReady(){
+        window.addEventListener('keydown', moveSelection);
+
+    }
+
+</script>
+
+</body>
+</html>
