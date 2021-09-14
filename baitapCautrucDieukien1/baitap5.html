@@ -1,10 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let a = +prompt('nhap diem bai kiem tra')
+    let b = +prompt('nhap diem bai thi giua ky')
+    let c = +prompt('nhap diem bai thi hoc ky')
+    let DTB = (a + b * 2 + c * 3) / 6
+    if (DTB >= 8) {
+        alert('Giỏi');
+    } else if (DTB >= 6.5) {
+        alert('Khá');
+    } else if (DTB >= 5) {
+        alert('Trung bình');
+    } else {
+        alert('Kém')
+    }
+</script>
+
 </body>
 </html>
