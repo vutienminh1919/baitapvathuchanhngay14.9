@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1> DO YOU LOVE ME ?</h1>
+<input type="button" id="yes" value="yes" onclick="dongY()">
+<input type="button" id="no" value="no" onmouseover="tuChoi()" style="position: absolute;">
+<script>
+    function dongY(){
+        alert('OK BRO')
+    }
+    function tuChoi(){
+        let left = parseInt(Math.random()*500)
+        let top = parseInt(Math.random()*500)
+        document.getElementById('no').style.left = left + 'px'
+        document.getElementById('no').style.top = top + 'px'
+    }
+
+</script>
+
+</body>
+</html>
